@@ -1,0 +1,41 @@
+<html ng-app="myModule">
+
+<head>
+
+<!-- lol doesn't exist for now <link rel = "stylesheet" type = "text/css" href = "style.css"/> -->
+</head>
+
+<body>
+
+
+
+<nav>
+  <a href='#/view1'>Click the button!</a>
+  <a href='#/view2'>See the posts!</a>
+</nav>
+<hr>
+<ng-view></ng-view>
+<button ng-click="showReddit()">Show Aww!</button>
+<p ng-repeat= "post in redditDisplay track by $index">
+  {{post.title}} </p>
+
+<p ng-repeat= "post in redditDisplay track by $index">
+    {{post.author}} </p>
+
+    <p ng-repeat= "post in redditDisplay track by $index">
+        {{post.time}} </p>
+
+        <p ng-repeat= "post in redditDisplay track by $index">
+            {{post.thumbnail}} </p>
+
+<!-- Scripts -->
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.2/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.2/angular-route.js"></script>
+<script src = 'scripts/module.js'> </script>
+<script src = 'scripts/factory.js'> </script>
+<script src = 'scripts/controller1.js'> </script>
+<script src = 'scripts/controller2.js'> </script>
+
+</body>
+
+</html>
