@@ -2,6 +2,7 @@ var app = angular.module('myModule');
 
 app.factory('ourFactory', function($http) {
   var redditData = {};
+  var redditTitles = {};
 
   return {
       searchReddit: function(){
@@ -11,11 +12,19 @@ app.factory('ourFactory', function($http) {
         }).then(function sucessfulCallback(response){
             //check to see if it's working
             console.log(response);
-            var redditCallData = response;
-            redditData.title = responseBody.data.children.post.data.title;
-            redditData.author = responseBody.data.children.post.data.author;
-            redditData.time = responseBody.data.children.post.data.created_utc;
-            redditData.thumbnail = responseBody.data.children.post.data.thumbnail;
+            //jazz V is the response data
+            var redditCallData = response.data.data.children;
+            console.log(redditCallData);
+//for each item in the array, store a new object?
+              redditData = redditCallData;
+
+
+            //redditTitles = redditCallData.data.data.children[0].data.title;
+            //console.log(redditData.title = redditCallData.data.data.children[0].data.title);
+            //redditData.author = redditCallData.data.children[0].data.author;
+            //redditData.time = redditCallData.data.children.data.created_utc;
+            //redditData.thumbnail = redditCallData.data.children.data.thumbnail;
+
         }, function(error){
           console.log(error); //in case messed up the pull or server issue
         });

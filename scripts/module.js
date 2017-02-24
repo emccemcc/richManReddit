@@ -4,11 +4,11 @@ app.config(function($routeProvider, $locationProvider){
   $routeProvider
     .when('/view1', {
         controller: 'ctrl1',
-        templateUrl: 'view1.html'
+        templateUrl: 'views/view1.html'
     })
     .when('/view2', {
       controller: 'ctrl2',
-      templateUrl: 'view2.html'
+      templateUrl: 'views/view2.html'
     })
 
     .otherwise({ redirectTo: '/'});

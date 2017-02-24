@@ -15,18 +15,6 @@
 </nav>
 <hr>
 <ng-view></ng-view>
-<button ng-click="showReddit()">Show Aww!</button>
-<p ng-repeat= "post in redditDisplay track by $index">
-  {{post.title}} </p>
-
-<p ng-repeat= "post in redditDisplay track by $index">
-    {{post.author}} </p>
-
-    <p ng-repeat= "post in redditDisplay track by $index">
-        {{post.time}} </p>
-
-        <p ng-repeat= "post in redditDisplay track by $index">
-            {{post.thumbnail}} </p>
 
 <!-- Scripts -->
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.2/angular.min.js"></script>

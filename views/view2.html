@@ -1,12 +1,16 @@
-<p ng-repeat= "post in redditDisplay track by $index">
-  {{post.title}} </p>
-
-<p ng-repeat= "post in redditDisplay track by $index">
+<p ng-repeat= "post in redditDisplay">
+  <script> console.log({redditDisplay.data.title}) </script>
+  {{post.data.title}}
+  {{post.data.author}}
+  <img src= {{post.data.thumbnail}}> </img></p>
+<!--
+<p ng-repeat= "post in redditDisplay">
     {{post.author}} </p>
 
-    <p ng-repeat= "post in redditDisplay track by $index">
+    <p ng-repeat= "post in redditDisplay">
         {{post.time}} </p>
 
-        <p ng-repeat= "post in redditDisplay track by $index">
+        <p ng-repeat= "post in redditDisplay">
             {{post.thumbnail}} </p>
-    
+
+    track by $index      -->
