@@ -1,0 +1,35 @@
+.title {
+  position: relative;
+  display: block;
+  font-weight: bold;
+  left: 10%;
+}
+
+.authorTime {
+  position: relative;
+  display: block;
+  left: 15%;
+  font-style: italic;
+}
+
+.picture img{
+
+  float:left;
+  border-radius: 15%;
+  margin-top: 5px;
+}
+
+.thumbnail {
+  height: 25%;
+
+}
+
+nav {
+  text-align: center;
+}
+
+/* button centered or make rotating carosel to click o with different update link */
+.btn {
+  left: 50%;
+
+}

@@ -8,21 +8,31 @@
 <body>
 
 
-
+<div class ="container"> <div class = "row">
 <nav>
   <a href='#/view1'>Click the button!</a>
   <a href='#/view2'>See the posts!</a>
 </nav>
+</div></div>
+
 <hr>
 <ng-view></ng-view>
 
 <!-- Scripts -->
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.2/angular.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.2/angular-route.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.2/angular-animate.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.2/angular-touch.js"></script>
+
+<!-- ui bootstrap, right place? -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 <script src = 'scripts/module.js'> </script>
 <script src = 'scripts/factory.js'> </script>
 <script src = 'scripts/controller1.js'> </script>
 <script src = 'scripts/controller2.js'> </script>
+<script src="scripts/ui-bootstrap-tpls-2.5.0.min.js"></script>
+<!-- having at the end so this way it will have all the anuglar bootsrap elements-->
+<link rel="stylesheet" href="css/uiStyle.css" />
 
 </body>
 

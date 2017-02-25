@@ -2,7 +2,7 @@ var app = angular.module('myModule');
 
 app.factory('ourFactory', function($http) {
   var redditData = {};
-  var redditTitles = {};
+
 
   return {
       searchReddit: function(){

@@ -1,8 +1,18 @@
-<p ng-repeat= "post in redditDisplay">
-  <script> console.log({redditDisplay.data.title}) </script>
-  {{post.data.title}}
-  {{post.data.author}}
-  <img src= {{post.data.thumbnail}}> </img></p>
+<div class ="container"> <div class = "row"> <div class = "thumbnail" ng-repeat= "post in redditDisplay">
+<div class = "picture"> <img src= {{post.data.thumbnail}}></img> </div>
+<span class = "title">    {{post.data.title}} </span>
+
+<span class = "authorTime">  {{post.data.author}}   {{post.data.created_utc}}</span>
+
+   </div>
+
+
+
+
+
+
+
+</span> </div> </div>
 <!--
 <p ng-repeat= "post in redditDisplay">
     {{post.author}} </p>
