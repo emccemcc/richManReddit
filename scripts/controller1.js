@@ -1,20 +1,9 @@
-var app = angular.module('myModule');
-
+var app = angular.module('myModule').controller('DropdownCtrl');
+//var choice = {{items.name}};
 app.controller('ctrl1', function($scope, $location, ourFactory){
 
   $scope.showReddit = function (){
-  //    var redditPost = {
-  //        title: 0,
-  //        author: 0,
-  //        time: 0,
-  //        thumbnail: 0
-
-  //    };
-
-  //};
-
-
-  //console.log(redditPost);
+    //console.log(choice);
 
 
   ourFactory.searchReddit();

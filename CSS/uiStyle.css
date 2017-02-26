@@ -14,6 +14,7 @@
 
 .picture img{
 
+  width: 15%;
   float:left;
   border-radius: 15%;
   margin-top: 5px;
@@ -21,7 +22,7 @@
 
 .thumbnail {
   height: 25%;
-
+  min-height: 115px;
 }
 
 nav {
@@ -31,5 +32,6 @@ nav {
 /* button centered or make rotating carosel to click o with different update link */
 .btn {
   left: 50%;
-
 }
+
+/* thumbnail media query to make sure it never goes below %picture */

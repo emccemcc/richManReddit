@@ -7,10 +7,26 @@
 
 <body>
 
-
-<div class ="container"> <div class = "row">
+<!-- give it a class f controller and it will display as intended -->
+<div class ="container" ng-controller = "ctrl1"> <div class = "row">
 <nav>
-  <a href='#/view1'>Click the button!</a>
+   <!-- <a ng-click="showReddit()">Click the button!</a> WILL WORK -->
+   <div ng-controller="DropdownCtrl">
+    <!-- Simple dropdown -->
+    <span uib-dropdown on-toggle="toggled(open)">
+      <a href id="simple-dropdown" uib-dropdown-toggle>
+        Click me for a dropdown, yo!
+      </a>
+      <ul class="dropdown-menu" uib-dropdown-menu aria-labelledby="simple-dropdown">
+        <li ng-repeat="choice in items">
+          <!-- in case things stop working -->
+          <a ng-click="showReddit()" ng-model="choice.id">{{choice.name}}</a>
+              <script> console.log(choice.name) </script>
+        </li>
+      </ul>
+    </span>
+</div>
+<!--end of dropdown -->
   <a href='#/view2'>See the posts!</a>
 </nav>
 </div></div>
@@ -33,6 +49,9 @@
 <script src="scripts/ui-bootstrap-tpls-2.5.0.min.js"></script>
 <!-- having at the end so this way it will have all the anuglar bootsrap elements-->
 <link rel="stylesheet" href="css/uiStyle.css" />
+<!-- additional js file for -->
+<script src = 'scripts/uiControl.js'> </script>
+
 
 </body>
 
